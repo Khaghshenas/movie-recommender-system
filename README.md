@@ -57,6 +57,7 @@ python3 -m venv venv
 source venv/bin/activate
 pip install --upgrade pip
 pip install -r requirements.txt
+```
 
 ## Run
 1. Run the application
@@ -69,6 +70,10 @@ python app/main.py
 docker build -t movie-recommender docker/
 docker run -p 8000:8000 movie-recommender
 ```
+
+## CI/CD
+
+This project uses GitHub Actions to automatically run tests on every push and pull request.
 
 ## License
 
