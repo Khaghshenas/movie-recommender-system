@@ -88,11 +88,7 @@ The following ranking-based metrics are reported at cutoff K:
 
 - Recall@K – proportion of relevant items that are successfully recommended
 
-- MAP@K – mean average precision, rewarding correct ranking order
-
 - NDCG@K – normalized discounted cumulative gain, emphasizing top-rank accuracy
-
-- HitRate@K – whether at least one relevant item appears in the Top-K list
 
 These metrics are standard for evaluating implicit-feedback recommender systems, where accurate ranking is more important than rating reconstruction.
 
@@ -106,10 +102,10 @@ A neural recommendation model trained to learn latent user preferences from impl
 
 #### Results
 ```text
-| Model           | Precision@10 | Recall@10 | MAP@10  | NDCG@10 | HitRate@10 |
-|-----------------|--------------|-----------|---------|---------|------------|
-| Item-Based CF   | 0.0041       | 0.0035    | 0.0007  | 0.0032  | 0.0396     |
-| Autoencoder     | 0.0307       | 0.0401    | 0.0105  | 0.0328  | 0.2524     | 
+| Model           | Precision@10 | Recall@10 | NDCG@10 |
+|-----------------|--------------|-----------|---------|
+| Item-Based CF   | 0.0041       | 0.0035    | 0.0032  |
+| Autoencoder     | 0.0307       | 0.0401    | 0.0328  |
 ```
 ### Discussion
 
@@ -117,11 +113,13 @@ The autoencoder-based model consistently outperforms Item-Based Collaborative Fi
 
 In particular:
 
-- Recall@K and HitRate@K show a substantial improvement, indicating that the autoencoder is significantly better at retrieving relevant items for users.
+- Recall@K shows a substantial improvement, indicating that the autoencoder is significantly better at retrieving relevant items for users.
 
-- NDCG@K and MAP@K improvements demonstrate superior ranking quality, with relevant items appearing closer to the top of recommendation lists.
+- NDCG@K improvement demonstrate superior ranking quality, with relevant items appearing closer to the top of recommendation lists.
 
 - Item-based CF struggles due to data sparsity and its reliance on pairwise similarity, which limits its ability to capture complex user preference patterns.
+
+- All values are low because the dataset is sparse (most users rate only a small fraction of movies), which is common in real-world recommender systems.
 
 ## CI/CD
 
