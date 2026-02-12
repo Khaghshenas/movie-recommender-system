@@ -121,6 +121,15 @@ In particular:
 
 - All values are low because the dataset is sparse (most users rate only a small fraction of movies), which is common in real-world recommender systems.
 
+## Further Improvements / Future Work
+Future work could focus on improving recommendation quality by:
+
+- Hybrid Approaches: Combining content-based and collaborative filtering methods to leverage both user preferences and movie features, which can help mitigate cold-start problems for new users or items.
+
+- Advanced Collaborative Filtering: Using matrix factorization or neural collaborative filtering to capture more complex latent patterns in user–item interactions.
+
+- Sequence-Aware Models: Incorporating temporal or sequential information with RNNs or Transformer-based architectures to model evolving user preferences over time.
+
 ## CI/CD
 
 This project uses GitHub Actions to automatically run tests on every push and pull request.
