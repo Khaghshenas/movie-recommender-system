@@ -101,12 +101,12 @@ A classical baseline using item–item similarity computed from user interaction
 A neural recommendation model trained to learn latent user preferences from implicit feedback and generate ranked item recommendations.
 
 #### Results
-```text
+
 | Model           | Precision@10 | Recall@10 | NDCG@10 |
 |-----------------|--------------|-----------|---------|
 | Item-Based CF   | 0.0041       | 0.0035    | 0.0032  |
 | Autoencoder     | 0.0307       | 0.0401    | 0.0328  |
-```
+
 ### Discussion
 
 The autoencoder-based model consistently outperforms Item-Based Collaborative Filtering across all Top-K metrics.
